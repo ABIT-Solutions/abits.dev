@@ -16,6 +16,11 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      - name: Edit .bashrc
+        run: |
+          echo "export DISPLAY=:0" >> ~/.bashrc
+          source ~/.bashrc
+
       - name: Set up Node.js version
         uses: actions/setup-node@v1
         with:

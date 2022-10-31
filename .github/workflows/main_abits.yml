@@ -23,7 +23,9 @@ jobs:
 
       - name: npm install, build, and test
         run: |
-          echo $DISPLAY
+          apt-get -y install xorg xvfb gtk2-engines-pixbuf
+          apt-get -y install dbus-x11 xfonts-base xfonts-100dpi xfonts-75dpi xfonts-cyrillic xfonts-scalable
+          export DISPLAY=":0"
           npm install
           npm run build --if-present
           npm run test --if-present

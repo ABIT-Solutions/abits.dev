@@ -1,48 +1,46 @@
 <!-- Material Toolbar at the top-->
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
+<div fxLayout="column" fxLayout.xs="column" fxLayoutAlign="space-around stretch" fxLayoutAlign.xs="space-around stretch">
   <div class="content">
-    <p>
-      <mat-toolbar color="primary">
-        <mat-toolbar-row>
-          <span>Advanced Business Intelligent Technology Solutions</span>
-          <div fxShow="true" fxHide.lt-md="true">
-            <span class="example-spacer"></span>
-            <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-              <mat-icon>contact_support</mat-icon>
-            </button>
-            <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
-              <mat-icon>work</mat-icon>
-            </button>
-          </div>
-        </mat-toolbar-row>
-      </mat-toolbar>
-    </p>
+        <p>
+          <mat-toolbar color="primary">
+            <mat-toolbar-row>
+              <span>Advanced Business Intelligent Technology Solutions</span>
+              <div fxShow="true" fxHide.lt-md="false">
+                <span class="example-spacer"></span>
+                <button mat-icon-button class="example-icon favorite-icon" (click)="first()" aria-label="Example icon-button with heart icon">
+                  <mat-icon>contact_support</mat-icon>
+                </button>
+                <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+                  <mat-icon>work</mat-icon>
+                </button>
+              </div>
+            </mat-toolbar-row>
+          </mat-toolbar>
+        </p>
   </div>
 
-<div class="content">
-  <div fxLayout="row wrap">
-    <div fxFlex="100%">
-      <mat-card class="example-card">
-        <mat-card-header>
-        </mat-card-header>
-        <img mat-card-image src="/assets/ABITSlogo.jpg" alt="image">
-        <mat-card-content>
-          <div class="center">
-            <h2>
-              <b>
-                Automate your business processes with ease at every step of the way.
-              </b>
-            </h2>
-          </div>
-        </mat-card-content>
-      </mat-card>
-    </div>
+  <div class="content">
+        <mat-card class="example-card">
+          <mat-card-header>
+          </mat-card-header>
+          <img mat-card-image src="/assets/ABITSlogo.jpg" alt="image">
+          <mat-card-content>
+            <div class="center">
+              <h2>
+                <b>
+                  Automate your business processes with ease at every step of the way.
+                </b>
+              </h2>
+            </div>
+          </mat-card-content>
+        </mat-card>
   </div>
 </div>
 
 <!-- Our Products: material cards-->
-  <mat-card>
+  <mat-card class="contact_support">
     <mat-card-title>Our Products</mat-card-title>
     <br/>
     We develop and cater bespoke intelligent software solutions to establish an easier business process for you- keep it simple, keep it intelligent.
@@ -111,29 +109,44 @@
 
 <!--------------------------------->
 
-<!-- <mat-card>
-  <mat-card-title>Forward a Message</mat-card-title>
+<mat-card>
+  <mat-card-title>Let's talk!</mat-card-title>
   <br/>
   <mat-card-subtitle>Send us an email for any work or queries and request a demo today!</mat-card-subtitle>
-  <mat-form-field appearance="fill">
-    <mat-label>Email Address</mat-label>
-    <input matInput>
-  </mat-form-field>
-  <br/>
-  <mat-form-field appearance="fill">
-    <mat-label>Company</mat-label>
-    <input matInput>
-  </mat-form-field>
-  <br/>
-  <mat-form-field class="form-width" appearance="fill">
-    <mat-label>Message</mat-label>
-    <textarea matInput placeholder="abc"></textarea>
-    <input matInput>
-  </mat-form-field>
-  <mat-card-actions>
-    <button mat-button>SUBMIT</button>
-  </mat-card-actions>
-</mat-card> -->
+
+  <form action="https://formsubmit.co/9bd793cbd69355ac58ae73267661bd14" method="POST">
+    <mat-form-field appearance="fill">
+      <mat-label>Email Address</mat-label>
+      <input matInput type="email" name="email" placeholder="Email Address" required>
+    </mat-form-field>
+    <br/>
+    <mat-form-field appearance="fill">
+      <mat-label>Company</mat-label>
+      <input matInput type="text" name="company" placeholder="Company" required>
+    </mat-form-field>
+    <br/>
+    <mat-form-field appearance="fill">
+      <mat-label>First name</mat-label>
+      <input matInput type="text" name="first_name" placeholder="First Name" required>
+    </mat-form-field>
+    <br/>
+    <mat-form-field appearance="fill">
+      <mat-label>Last name</mat-label>
+      <input matInput type="text" name="last_name" placeholder="Last Name" required>
+    </mat-form-field>
+    <br/>
+    <mat-form-field class="form-width" appearance="fill">
+      <mat-label>Message</mat-label>
+      <textarea matInput type="text" name="message" placeholder="Connect with us!" required></textarea>
+      <input matInput>
+    </mat-form-field>
+    <br/>
+    <mat-icon class="icon-display">info</mat-icon>By submitting this form I consent to having ABIT Solutions collect and process my personal data
+    <mat-card-actions>
+      <button mat-button type="submit">SUBMIT</button>
+    </mat-card-actions>
+  </form>
+</mat-card>
 
 <!---------------------------------->
 
@@ -141,8 +154,8 @@
   <mat-card-title>Contact Us</mat-card-title>
   <br/>
   <mat-card-subtitle>
-    <mat-icon>email</mat-icon> hello@abits.com
+    <mat-icon>email</mat-icon> contactus@abits.dev
     <br/>
-    <mat-icon>phone</mat-icon> +44 1273 864230  
+    <mat-icon>phone</mat-icon> +44 1273 864230 
   </mat-card-subtitle>
 </mat-card> 

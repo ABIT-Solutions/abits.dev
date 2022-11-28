@@ -47,3 +47,12 @@ section {
     max-width: 200px;
     height: auto;
   }
+
+  .content {
+    width: 100%
+  }
+
+  .icon-display {
+    transform: scale(0.75);
+    vertical-align:middle;
+  }

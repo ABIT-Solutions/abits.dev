@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Renderer2 } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +7,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ng-mat';
+
+  constructor(private renderer: Renderer2) {}
+
+  first(){
+    try {
+  const errorField = this.renderer.selectRootElement('.contact_support');
+    errorField.scrollIntoView();
+} catch (err) {
+
+}
+}
 }
